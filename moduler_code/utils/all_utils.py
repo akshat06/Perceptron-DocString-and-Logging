@@ -6,6 +6,15 @@ import logging
 
 
 def prepare_data(df, target_col="y"):
+    """it returns labels and independent features
+
+    Args:
+        df (pd.DataFrame): This is a pandas dataframe
+        target_col (str, optional): label col_name. Defaults to "y".
+
+    Returns:
+        tuple: label and X
+    """
     logging.info("Preparing data for training")
     X = df.drop(target_col, axis=1)
     
